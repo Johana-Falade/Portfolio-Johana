@@ -1,0 +1,631 @@
+/* ============================================================
+   JOHANA FALADE — PORTFOLIO v3
+   Hero centrée + Photo dans À propos
+   ============================================================ */
+
+:root {
+  --jf-paper: #fafcf8;
+  --jf-ink: #17212b;
+  --jf-muted: #5a6570;
+  --jf-teal: #2a9d8f;
+  --jf-teal-10: rgba(42, 157, 143, 0.10);
+  --jf-coral: #e76f51;
+  --jf-coral-10: rgba(231, 111, 81, 0.10);
+  --jf-gold: #e8b44f;
+  --jf-gold-10: rgba(232, 180, 79, 0.12);
+  --jf-deep: #263f4c;
+  --jf-line: #e2e8f0;
+  --jf-white: #ffffff;
+  --jf-radius: 16px;
+  --jf-radius-lg: 24px;
+  --jf-tr: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Base --- */
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--jf-paper);
+  color: var(--jf-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.jf-logo {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  background: var(--jf-deep);
+  color: var(--jf-white);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.jf-brand-text { font-weight: 800; font-size: 1rem; color: var(--jf-ink); }
+
+.navbar {
+  background: rgba(250, 252, 248, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--jf-line);
+  transition: background var(--jf-tr), box-shadow var(--jf-tr);
+}
+
+.navbar.js-scrolled {
+  background: rgba(250, 252, 248, 0.95);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-nav .nav-link {
+  color: var(--jf-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: color var(--jf-tr), background var(--jf-tr);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--jf-teal);
+  background: var(--jf-teal-10);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: var(--jf-white);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    padding: 8px 0;
+  }
+  .navbar-nav .nav-link { padding: 12px 20px; }
+}
+
+/* ============================================================
+   HERO — CENTRÉE
+   ============================================================ */
+.jf-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--jf-paper) 0%, #eef4f1 60%, var(--jf-paper) 100%);
+}
+
+.jf-hero-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 120px 0 80px;
+}
+
+/* --- Pill badge --- */
+.jf-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px 8px 14px;
+  background: var(--jf-white);
+  border: 1px solid var(--jf-line);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--jf-ink);
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: border-color var(--jf-tr), box-shadow var(--jf-tr);
+}
+
+.jf-pill:hover {
+  border-color: var(--jf-teal);
+  box-shadow: 0 4px 16px rgba(42, 157, 143, 0.12);
+  color: var(--jf-ink);
+}
+
+.jf-pill-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: jf-pulse 2s ease-in-out infinite;
+}
+
+@keyframes jf-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+/* --- Titre --- */
+.jf-hero-title {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: var(--jf-ink);
+  margin-bottom: 24px;
+}
+
+/* --- Highlight --- */
+.jf-highlight {
+  display: inline;
+  background: linear-gradient(120deg, var(--jf-teal) 0%, #21867a 100%);
+  color: var(--jf-white);
+  padding: 2px 14px;
+  border-radius: 8px;
+  font-style: normal;
+}
+
+/* --- Sous-titre --- */
+.jf-hero-sub {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: var(--jf-muted);
+  line-height: 1.75;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* --- Blobs --- */
+.jf-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.jf-blob--teal {
+  width: 500px; height: 500px;
+  background: var(--jf-teal);
+  opacity: 0.18;
+  top: -100px; right: -80px;
+}
+
+.jf-blob--coral {
+  width: 350px; height: 350px;
+  background: var(--jf-coral);
+  opacity: 0.12;
+  bottom: -60px; left: -40px;
+}
+
+@media (max-width: 767.98px) {
+  .jf-hero-inner { padding: 140px 0 60px; }
+  .jf-blob { display: none; }
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.jf-btn {
+  border-radius: 12px !important;
+  font-weight: 700;
+  transition: transform var(--jf-tr), box-shadow var(--jf-tr);
+}
+
+.jf-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+.jf-btn--outline {
+  border: 1px solid var(--jf-line) !important;
+  color: var(--jf-ink) !important;
+  background: var(--jf-white) !important;
+}
+
+.jf-btn--outline:hover {
+  border-color: #ccc !important;
+}
+
+/* ============================================================
+   CHIPS & BADGES
+   ============================================================ */
+.jf-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  background: var(--jf-teal-10);
+  color: var(--jf-teal);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+
+.jf-chip--light {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--jf-white);
+}
+
+.jf-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--jf-teal-10);
+  color: var(--jf-teal);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.jf-badge-doc {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.jf-badge-doc--red { background: var(--jf-coral-10); color: var(--jf-coral); }
+.jf-badge-doc--gold { background: var(--jf-gold-10); color: #a07a20; }
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+.jf-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--jf-teal);
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: gap var(--jf-tr), color var(--jf-tr);
+}
+
+.jf-link:hover { gap: 10px; color: #1e8a7e; }
+
+/* ============================================================
+   A PROPOS — PHOTO GLASSMORPHISM
+   ============================================================ */
+.jf-photo-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Blobs derriere la photo pour render le glass visible */
+.jf-photo-wrapper::before,
+.jf-photo-wrapper::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.jf-photo-wrapper::before {
+  width: 200px;
+  height: 200px;
+  background: var(--jf-teal);
+  opacity: 0.25;
+  top: -30px;
+  left: -40px;
+}
+
+.jf-photo-wrapper::after {
+  width: 180px;
+  height: 180px;
+  background: var(--jf-coral);
+  opacity: 0.2;
+  bottom: 20px;
+  right: -30px;
+}
+
+.jf-about-photo {
+  position: relative;
+  z-index: 1;
+  width: 350px;
+  height: 450px;
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(30px) saturate(1.2);
+  -webkit-backdrop-filter: blur(30px) saturate(1.2);
+  border: 8px solid rgba(255, 255, 255, 0.45);
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.06),
+    0 2px 8px rgba(0, 0, 0, 0.03),
+    inset 0 2px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -2px 0 rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  transition: transform var(--jf-tr), box-shadow var(--jf-tr);
+}
+
+.jf-about-photo:hover {
+  transform: translateY(-8px) scale(1.015);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 20px 60px rgba(42, 157, 143, 0.15),
+    0 8px 20px rgba(0, 0, 0, 0.06),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -2px 0 rgba(255, 255, 255, 0.3);
+}
+
+.jf-about-photo img {
+  border-radius: 28px;
+}
+
+/* --- Stats --- */
+.jf-stat {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+  background: var(--jf-white);
+  border: 1px solid var(--jf-line);
+  border-radius: var(--jf-radius);
+  min-width: 90px;
+}
+
+.jf-stat-value {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--jf-teal);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.jf-stat-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--jf-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 991.98px) {
+  .jf-photo-wrapper {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+/* ============================================================
+   CARDS — ROW STYLE (liste propre)
+   ============================================================ */
+.jf-card-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background: var(--jf-white);
+  border-radius: var(--jf-radius);
+  transition: transform var(--jf-tr), box-shadow var(--jf-tr);
+}
+
+.jf-card-row:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08) !important;
+}
+
+.jf-card-avatar {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  color: var(--jf-white);
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.jf-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.jf-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--jf-ink);
+  margin-bottom: 4px;
+}
+
+.jf-card-desc {
+  font-size: 0.85rem;
+  color: var(--jf-muted);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.jf-card-action {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--jf-teal);
+  background: var(--jf-teal-10);
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background var(--jf-tr), color var(--jf-tr);
+}
+
+.jf-card-action:hover {
+  background: var(--jf-teal);
+  color: var(--jf-white);
+}
+
+/* Responsive : stack sur mobile */
+@media (max-width: 575.98px) {
+  .jf-card-row {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .jf-card-action {
+    margin-left: auto;
+  }
+}
+
+.bg-gradient-teal { background: linear-gradient(135deg, var(--jf-teal) 0%, #21867a 100%); }
+.bg-gradient-coral { background: linear-gradient(135deg, var(--jf-coral) 0%, #d45a3d 100%); }
+.bg-gradient-deep { background: linear-gradient(135deg, var(--jf-deep) 0%, #1a2e38 100%); }
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+.jf-timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 36px;
+}
+
+.jf-timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px; top: 8px; bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--jf-teal) 0%, var(--jf-coral) 100%);
+  border-radius: 2px;
+}
+
+.jf-timeline-item { position: relative; padding-bottom: 32px; }
+.jf-timeline-item:last-child { padding-bottom: 0; }
+
+.jf-timeline-dot {
+  position: absolute;
+  left: -36px; top: 6px;
+  width: 16px; height: 16px;
+  background: var(--jf-white);
+  border: 3px solid var(--jf-teal);
+  border-radius: 50%;
+  z-index: 1;
+  transition: background var(--jf-tr), transform var(--jf-tr);
+}
+
+.jf-timeline-item:hover .jf-timeline-dot {
+  background: var(--jf-teal);
+  transform: scale(1.25);
+}
+
+.jf-timeline-body {
+  padding: 20px 24px;
+  background: var(--jf-white);
+  border: 1px solid var(--jf-line);
+  border-radius: var(--jf-radius);
+  transition: transform var(--jf-tr), box-shadow var(--jf-tr);
+}
+
+.jf-timeline-item:hover .jf-timeline-body {
+  transform: translateX(4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.jf-timeline-year {
+  display: inline-block;
+  padding: 3px 12px;
+  background: var(--jf-coral-10);
+  color: var(--jf-coral);
+  font-size: 0.75rem;
+  font-weight: 900;
+  border-radius: 100px;
+  margin-bottom: 8px;
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.jf-contact {
+  background: linear-gradient(135deg, var(--jf-deep) 0%, #1a3340 100%);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.12);
+}
+
+.jf-contact .jf-btn { text-align: left; font-weight: 700; }
+.jf-contact .btn-outline-light { border-color: rgba(255, 255, 255, 0.3); }
+.jf-contact .btn-outline-light:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.5); }
+
+/* ============================================================
+   SECTION TITLES — BOLD EFFECTS
+   ============================================================ */
+.jf-hero-title,
+section h2 {
+  font-family: 'Bricolage Grotesque', serif;
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--jf-ink);
+  margin-bottom: 16px;
+}
+
+section h2 strong,
+section h2 b {
+  color: var(--jf-teal);
+}
+
+/* Variantes par section */
+#apropos h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  max-width: 500px;
+}
+
+#projets h2,
+#certificats h2,
+#competences h2,
+#parcours h2 {
+  text-align: center;
+}
+
+#contact h2 {
+  color: var(--jf-white);
+  text-align: center;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+}
+
+#contact h2 strong {
+  color: var(--jf-white);
+  text-decoration: underline;
+  text-decoration-color: var(--jf-teal);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
+}
+
+/* ============================================================
+   SECTION ALT
+   ============================================================ */
+.jf-section-alt {
+  background: linear-gradient(180deg, rgba(42, 157, 143, 0.025) 0%, rgba(231, 111, 81, 0.015) 100%);
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+.js-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.js-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+hr.container { max-width: 1120px; }

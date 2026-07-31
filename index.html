@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="fr" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio — Johana Falade</title>
+    <meta name="description" content="Portfolio de Johana Falade : CV, certificats, compétences et parcours en informatique." />
+    <meta name="theme-color" content="#fafcf8" />
+    <meta property="og:title" content="Portfolio — Johana Falade" />
+    <meta property="og:description" content="Étudiante en Système Informatique et Logiciel." />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+
+    <a href="#main-content" class="visually-hidden-focusable">Aller au contenu principal</a>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top js-header" id="siteNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand fw-800 d-flex align-items-center gap-2" href="#">
+          <span class="jf-logo">JF</span>
+          <span class="jf-brand-text">Johana Falade</span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse" aria-controls="navCollapse" aria-label="Menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navCollapse">
+          <ul class="navbar-nav gap-1 gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#projets"><i class="bi bi-folder2-open me-1"></i>Projets</a></li>
+            <li class="nav-item"><a class="nav-link" href="#competences"><i class="bi bi-code-square me-1"></i>Compétences</a></li>
+            <li class="nav-item"><a class="nav-link" href="#certificats"><i class="bi bi-award me-1"></i>Certificats</a></li>
+            <li class="nav-item"><a class="nav-link" href="#parcours"><i class="bi bi-route me-1"></i>Parcours</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact"><i class="bi bi-envelope-paper me-1"></i>Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content">
+
+      <!-- ===== HERO — CENTRÉE ===== -->
+      <section class="jf-hero" id="accueil">
+        <div class="container px-4 px-lg-5 position-relative" style="z-index:2">
+          <div class="jf-hero-inner text-center">
+
+            <!-- Badge pill -->
+            <div class="js-reveal">
+              <a href="#contact" class="jf-pill">
+                <span class="jf-pill-dot"></span>
+                Disponible pour des opportunités
+                <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+
+            <!-- Titre -->
+            <h1 class="jf-hero-title js-reveal">
+              Je conçois des solutions<br />
+              numériques avec<br />
+              <span class="jf-highlight">passion</span> et curiosité.
+            </h1>
+
+            <!-- Sous-titre -->
+            <p class="jf-hero-sub js-reveal">
+              Étudiante en Système Informatique et Logiciel, je développe mes compétences
+              en informatique, bureautique et web avec motivation et esprit d'équipe.
+            </p>
+
+            <!-- Boutons -->
+            <div class="d-flex flex-wrap justify-content-center gap-3 mt-4 js-reveal">
+              <a class="btn btn-dark btn-lg jf-btn" href="./assets/documents/johana-falade-cv.pdf" target="_blank" rel="noreferrer">
+                <i class="bi bi-file-earmark-text me-2"></i>Voir mon CV
+              </a>
+              <a class="btn btn-light btn-lg jf-btn jf-btn--outline" href="https://github.com/Johana-Falade" target="_blank" rel="noreferrer">
+                <i class="bi bi-github me-2"></i>GitHub
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Blobs décoratifs -->
+        <div class="jf-blob jf-blob--teal"></div>
+        <div class="jf-blob jf-blob--coral"></div>
+      </section>
+
+      <!-- ===== A PROPOS + PHOTO ===== -->
+      <section class="py-5" id="apropos">
+        <div class="container px-4 px-lg-5 py-lg-5">
+          <div class="row align-items-center g-5">
+
+            <!-- Photo glassmorphism -->
+            <div class="col-lg-5 js-reveal">
+              <div class="jf-photo-wrapper">
+                <div class="jf-about-photo">
+                  <img src="./assets/johana-falade-photo.png" alt="Portrait de Johana Falade" class="w-100 h-100" style="object-fit:cover;object-position:74% 24%" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Texte -->
+            <div class="col-lg-7 js-reveal">
+              <span class="jf-chip"><i class="bi bi-person me-1"></i> À propos</span>
+              <h2>Une présence <strong>professionnelle</strong> claire pour présenter mon parcours.</h2>
+              <p class="lead text-muted">
+                Jeune informaticienne en devenir, je suis actuellement en Licence Professionnelle 2
+                Système Informatique et Logiciel à l'ESCAE Bénin. Je souhaite continuer à apprendre,
+                participer à des projets utiles et évoluer dans un environnement multiculturel.
+              </p>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <div class="jf-stat">
+                  <span class="jf-stat-value">LP 2</span>
+                  <span class="jf-stat-label">Formation</span>
+                </div>
+                <div class="jf-stat">
+                  <span class="jf-stat-value">4</span>
+                  <span class="jf-stat-label">Langues</span>
+                </div>
+                <div class="jf-stat">
+                  <span class="jf-stat-value">3+</span>
+                  <span class="jf-stat-label">Certificats</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="container my-0 border-top opacity-25" />
+
+      <!-- ===== PROJETS ===== -->
+      <section class="py-5 jf-section-alt" id="projets">
+        <div class="container px-4 px-lg-5 py-lg-5">
+          <div class="text-center mb-5 js-reveal">
+            <span class="jf-chip"><i class="bi bi-folder2-open me-1"></i> Projets</span>
+            <h2>Travaux et centres d'<strong>intérêt</strong> numériques</h2>
+          </div>
+          <div class="d-flex flex-column gap-3">
+            <div class="js-reveal">
+              <div class="card jf-card-row border-0 shadow-sm">
+                <div class="jf-card-avatar bg-gradient-teal">SP</div>
+                <div class="jf-card-body">
+                  <span class="jf-badge">Portfolio</span>
+                  <h3 class="jf-card-title">Site personnel</h3>
+                  <p class="jf-card-desc">Création d'un portfolio responsive pour présenter mon CV, mes certificats et mon évolution.</p>
+                </div>
+                <a href="https://github.com/Johana-Falade" target="_blank" rel="noreferrer" class="jf-card-action">
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="js-reveal">
+              <div class="card jf-card-row border-0 shadow-sm">
+                <div class="jf-card-avatar bg-gradient-coral">DP</div>
+                <div class="jf-card-body">
+                  <span class="jf-badge">Bureautique</span>
+                  <h3 class="jf-card-title">Documents professionnels</h3>
+                  <p class="jf-card-desc">Utilisation de Word, PowerPoint et Excel pour produire, organiser et présenter des informations.</p>
+                </div>
+                <a href="./assets/documents/johana-falade-cv.pdf" target="_blank" rel="noreferrer" class="jf-card-action">
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="js-reveal">
+              <div class="card jf-card-row border-0 shadow-sm">
+                <div class="jf-card-avatar bg-gradient-deep">DW</div>
+                <div class="jf-card-body">
+                  <span class="jf-badge">Apprentissage</span>
+                  <h3 class="jf-card-title">Développement web</h3>
+                  <p class="jf-card-desc">Progression en HTML, CSS et Internet avec une attention portée à la clarté et à la pratique.</p>
+                </div>
+                <a href="#competences" class="jf-card-action">
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== COMPETENCES ===== -->
+      <section class="py-5" id="competences">
+        <div class="container px-4 px-lg-5 py-lg-5">
+          <div class="text-center mb-5 js-reveal">
+            <span class="jf-chip"><i class="bi bi-code-square me-1"></i> Compétences</span>
+            <h2>Ce que je <strong>maîtrise</strong></h2>
+          </div>
+          <div class="d-flex flex-column gap-3">
+            <div class="js-reveal">
+              <div class="card jf-card-row border-0 shadow-sm">
+                <div class="jf-card-avatar bg-gradient-teal">WE</div>
+                <div class="jf-card-body">
+                  <h3 class="jf-card-title">Web</h3>
+                  <p class="jf-card-desc mb-0">HTML, CSS, navigation Internet et bases d'intégration web.</p>
+                </div>
+              </div>
+            </div>
+            <div class="js-reveal">
+              <div class="card jf-card-row border-0 shadow-sm">
+                <div class="jf-card-avatar bg-gradient-coral">BU</div>
+                <div class="jf-card-body">
+                  <h3 class="jf-card-title">Bureautique</h3>
+                  <p class="jf-card-desc mb-0">Word, PowerPoint, Excel, saisie, scannage et organisation de documents.</p>
+                </div>
+              </div>
+            </div>
+            <div class="js-reveal">
+              <div class="card jf-card-row border-0 shadow-sm">
+                <div class="jf-card-avatar bg-gradient-deep">LA</div>
+                <div class="jf-card-body">
+                  <h3 class="jf-card-title">Langues</h3>
+                  <p class="jf-card-desc mb-0">Français, anglais, goun et chinois.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="container my-0 border-top opacity-25" />
+
+      <!-- ===== CERTIFICATS ===== -->
+      <section class="py-5 jf-section-alt" id="certificats">
+        <div class="container px-4 px-lg-5 py-lg-5">
+          <div class="text-center mb-5 js-reveal">
+            <span class="jf-chip"><i class="bi bi-award me-1"></i> Certificats</span>
+            <h2>Documents à <strong>consulter</strong></h2>
+          </div>
+          <div class="d-flex flex-column gap-3">
+            <div class="js-reveal">
+              <div class="card jf-card-row border-0 shadow-sm">
+                <div class="jf-card-avatar bg-gradient-coral">CV</div>
+                <div class="jf-card-body">
+                  <span class="jf-badge-doc jf-badge-doc--red"><i class="bi bi-filetype-pdf"></i> PDF</span>
+                  <h3 class="jf-card-title">Curriculum Vitae</h3>
+                  <p class="jf-card-desc mb-0">CV de Johana Falade avec profil, formation, compétences et expériences professionnelles.</p>
+                </div>
+                <a class="jf-card-action" href="./assets/documents/johana-falade-cv.pdf" target="_blank" rel="noreferrer">
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="js-reveal">
+              <div class="card jf-card-row border-0 shadow-sm">
+                <div class="jf-card-avatar bg-gradient-deep">HP</div>
+                <div class="jf-card-body">
+                  <span class="jf-badge-doc jf-badge-doc--gold"><i class="bi bi-patch-check"></i> HP LIFE</span>
+                  <h3 class="jf-card-title">Réseautage professionnel</h3>
+                  <p class="jf-card-desc mb-0">Certificat de fin de cours sur le réseautage professionnel pour l'évolution de carrière.</p>
+                </div>
+                <a class="jf-card-action" href="./assets/documents/certificat-hp-life-reseautage.pdf" target="_blank" rel="noreferrer">
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PARCOURS ===== -->
+      <section class="py-5" id="parcours">
+        <div class="container px-4 px-lg-5 py-lg-5">
+          <div class="text-center mb-5 js-reveal">
+            <span class="jf-chip"><i class="bi bi-route me-1"></i> Parcours</span>
+            <h2>Expérience et <strong>formation</strong></h2>
+          </div>
+          <div class="jf-timeline">
+            <article class="jf-timeline-item js-reveal">
+              <div class="jf-timeline-dot"></div>
+              <div class="jf-timeline-body">
+                <span class="jf-timeline-year">2026</span>
+                <h3 class="fw-bold fs-5 mb-1">Licence Professionnelle 2 SIL</h3>
+                <p class="text-muted small mb-0">Système Informatique et Logiciel, option Informatique, à l'ESCAE Bénin.</p>
+              </div>
+            </article>
+            <article class="jf-timeline-item js-reveal">
+              <div class="jf-timeline-dot"></div>
+              <div class="jf-timeline-body">
+                <span class="jf-timeline-year">2025</span>
+                <h3 class="fw-bold fs-5 mb-1">Stage professionnel</h3>
+                <p class="text-muted small mb-0">Opératrice de saisie au sein de l'Établissement GG Cadre Sain.</p>
+              </div>
+            </article>
+            <article class="jf-timeline-item js-reveal">
+              <div class="jf-timeline-dot"></div>
+              <div class="jf-timeline-body">
+                <span class="jf-timeline-year">2024</span>
+                <h3 class="fw-bold fs-5 mb-1">Baccalauréat série F3</h3>
+                <p class="text-muted small mb-0">Collège Privé d'Enseignement Polytechnique Les Archanges.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <hr class="container my-0 border-top opacity-25" />
+
+      <!-- ===== CONTACT ===== -->
+      <section class="py-5 jf-section-alt" id="contact">
+        <div class="container px-4 px-lg-5 py-lg-5">
+          <div class="jf-contact rounded-4 p-4 p-md-5 text-center js-reveal">
+            <span class="jf-chip jf-chip--light"><i class="bi bi-envelope-paper me-1"></i> Contact</span>
+            <h2 class="text-white">Restons en <strong>contact</strong>.</h2>
+            <p class="text-white-50 mb-4 mx-auto" style="max-width:520px">Disponible pour apprendre, collaborer et participer à des opportunités en informatique.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <a class="btn btn-light btn-lg jf-btn" href="mailto:johanasandrine9@gmail.com"><i class="bi bi-envelope-fill me-2"></i>johanasandrine9@gmail.com</a>
+              <a class="btn btn-outline-light btn-lg jf-btn" href="tel:+2290162240215"><i class="bi bi-telephone-fill me-2"></i>+229 01 62 24 02 15</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-4 border-top">
+      <div class="container px-4 px-lg-5">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+          <p class="text-muted small mb-0">&copy; 2026 Johana Falade. Tous droits réservés.</p>
+          <div class="d-flex gap-3">
+            <a href="https://github.com/Johana-Falade" target="_blank" rel="noreferrer" class="text-muted small text-decoration-none"><i class="bi bi-github me-1"></i>GitHub</a>
+            <a href="./assets/documents/johana-falade-cv.pdf" target="_blank" rel="noreferrer" class="text-muted small text-decoration-none"><i class="bi bi-file-earmark-text me-1"></i>CV</a>
+            <a href="./assets/documents/certificat-hp-life-reseautage.pdf" target="_blank" rel="noreferrer" class="text-muted small text-decoration-none"><i class="bi bi-award me-1"></i>Certificat</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
