@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://johana-falade.github.io/Portfolio-Johana/sitemap.xml
